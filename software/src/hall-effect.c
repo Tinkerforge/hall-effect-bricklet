@@ -104,7 +104,7 @@ void get_edge_count(const ComType com, const GetEdgeCount *data) {
 }
 
 void set_edge_count_config(const ComType com, const SetEdgeCountConfig *data) {
-	if(BC->edge_type > EDGE_TYPE_BOTH) {
+	if(data->edge_type > EDGE_TYPE_BOTH) {
 		BA->com_return_error(data, sizeof(MessageHeader), MESSAGE_ERROR_CODE_INVALID_PARAMETER, com);
 		return;
 	}
