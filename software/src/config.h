@@ -54,6 +54,8 @@ typedef struct {
 	uint32_t edge_callback_period;
 	uint32_t tick;
 
+	uint32_t edge_count_last;
+
 	uint8_t edge_type;
 	uint8_t debounce;
 
