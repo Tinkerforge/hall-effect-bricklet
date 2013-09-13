@@ -178,6 +178,7 @@ void constructor(void) {
 	BC->edge_interrupt_count = 0;
 	BC->edge_interrupt_counter = 0;
 	BC->edge_type = EDGE_TYPE_RISING;
+	BC->edge_count_last = 0;
 	BC->send_edge_count = false;
 	BC->send_edge_interrupt = false;
 	BC->tick = 0;
@@ -243,6 +244,10 @@ void tick(const uint8_t tick_type) {
 		}
 
 		if(BC->send_edge_count) {
+			if(BC->edge_count == BC->edge_count_last) {
+				return;
+			}
+
 			EdgeCount ec;
 			BA->com_make_default_header(&ec, BS->uid, sizeof(EdgeCount), FID_EDGE_COUNT);
 			ec.count = BC->edge_count;
@@ -253,6 +258,8 @@ void tick(const uint8_t tick_type) {
 										   *BA->com_current);
 
 			BC->send_edge_count = false;
+
+			BC->edge_count_last = BC->edge_count;
 		}
 	}
 }
