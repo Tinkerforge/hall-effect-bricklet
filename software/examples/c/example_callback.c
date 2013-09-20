@@ -10,6 +10,7 @@
 
 // Callback function for edge_count callback
 void cb_edge_count(int32_t edge_count, bool value, void *user_data) {
+	(void)value; // avoid unused parameter warning
 	(void)user_data; // avoid unused parameter warning
 
 	printf("Edge Count: %d\n", edge_count);
