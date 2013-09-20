@@ -21,7 +21,7 @@ int main() {
 	ipcon_create(&ipcon);
 
 	// Create device object
-	HallEffect ehe;
+	HallEffect he;
 	hall_effect_create(&he, UID, &ipcon); 
 
 	// Connect to brickd
