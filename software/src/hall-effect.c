@@ -171,6 +171,7 @@ void constructor(void) {
 	BA->PIO_Configure(&PIN_HALL_EFFECT, 1);
 
 	BC->current_value = false;
+	BC->current_value_last = false;
 	BC->debounce = 100;
 	BC->debounce_counter = 0;
 	BC->edge_callback_period = 0;
@@ -244,7 +245,7 @@ void tick(const uint8_t tick_type) {
 		}
 
 		if(BC->send_edge_count) {
-			if(BC->edge_count == BC->edge_count_last) {
+			if(BC->edge_count == BC->edge_count_last && BC->current_value == BC->current_value_last) {
 				return;
 			}
 
@@ -259,6 +260,7 @@ void tick(const uint8_t tick_type) {
 
 			BC->send_edge_count = false;
 
+			BC->current_value_last = BC->current_value;
 			BC->edge_count_last = BC->edge_count;
 		}
 	}

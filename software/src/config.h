@@ -62,6 +62,7 @@ typedef struct {
 	uint8_t debounce_counter;
 
 	bool current_value;
+	bool current_value_last;
 	bool send_edge_interrupt;
 	bool send_edge_count;
 } BrickContext;
