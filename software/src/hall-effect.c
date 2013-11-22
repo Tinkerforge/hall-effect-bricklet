@@ -170,8 +170,8 @@ void constructor(void) {
 	PIN_HALL_EFFECT.attribute = PIO_DEFAULT;
 	BA->PIO_Configure(&PIN_HALL_EFFECT, 1);
 
-	BC->current_value = false;
-	BC->current_value_last = false;
+	BC->current_value = true;
+	BC->current_value_last = true;
 	BC->debounce = 100;
 	BC->debounce_counter = 0;
 	BC->edge_callback_period = 0;
