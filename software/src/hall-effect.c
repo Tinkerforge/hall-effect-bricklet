@@ -166,6 +166,8 @@ void get_edge_count_callback_period(const ComType com, const GetEdgeCountCallbac
 }
 
 void constructor(void) {
+	_Static_assert(sizeof(BrickContext) <= BRICKLET_CONTEXT_MAX_SIZE, "BrickContext too big");
+
 	PIN_HALL_EFFECT.type = PIO_INPUT;
 	PIN_HALL_EFFECT.attribute = PIO_DEFAULT;
 	BA->PIO_Configure(&PIN_HALL_EFFECT, 1);
