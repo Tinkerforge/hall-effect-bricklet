@@ -6,9 +6,9 @@ require_once('Tinkerforge/BrickletHallEffect.php');
 use Tinkerforge\IPConnection;
 use Tinkerforge\BrickletHallEffect;
 
-$host = 'localhost';
-$port = 4223;
-$uid = 'XYZ'; // Change to your UID
+const HOST = 'localhost';
+const PORT = 4223;
+const UID = 'XYZ'; // Change to your UID
 
 # Callback function for edge_count callback 
 function cb_edge_count($edge_count, $value)
@@ -17,9 +17,9 @@ function cb_edge_count($edge_count, $value)
 }
 
 $ipcon = new IPConnection(); // Create IP connection
-$he = new BrickletHallEffect($uid, $ipcon); // Create device object
+$he = new BrickletHallEffect(UID, $ipcon); // Create device object
 
-$ipcon->connect($host, $port); // Connect to brickd
+$ipcon->connect(HOST, PORT); // Connect to brickd
 // Don't use device before ipcon is connected
 
 // Set Period for edge_count callback to 0.05s (50ms)
