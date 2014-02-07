@@ -1,0 +1,19 @@
+Needs["NETLink`"]
+LoadNETAssembly["Tinkerforge",NotebookDirectory[]<>"../../.."]
+
+host="localhost"
+port=4223
+uid="amb"(* Change to your UID *)
+
+(* Create IPConnection and device object *)
+ipcon=NETNew["Tinkerforge.IPConnection"]
+he=NETNew["Tinkerforge.BrickletHallEffect",uid,ipcon]
+ipcon@Connect[host,port]
+
+(* Get current edge count of Hall Effect Bricklet without reset *)
+Print["Edge Count: "<>ToString[he@GetEdgeCount[False]]]
+
+(* Clean up *)
+ipcon@Disconnect[]
+ReleaseNETObject[he]
+ReleaseNETObject[ipcon]

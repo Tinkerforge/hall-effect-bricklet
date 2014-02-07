@@ -1,0 +1,28 @@
+Needs["NETLink`"]
+LoadNETAssembly["Tinkerforge",NotebookDirectory[]<>"../../.."]
+
+host="localhost"
+port=4223
+uid="uit"(* Change to your UID *)
+
+(* Create IPConnection and device object *)
+ipcon=NETNew["Tinkerforge.IPConnection"]
+he=NETNew["Tinkerforge.BrickletHallEffect",uid,ipcon]
+ipcon@Connect[host,port]
+
+(* Set Period for edge count callback to 0.05s (50ms) *)
+(* Note: The edge count callback is only called every 50ms if the *)
+(*       edge count has changed since the last call! *)
+he@SetEdgeCountCallbackPeriod[50]
+
+(* Callback function for edge count callback *)
+EdgeCountCB[sender_,edgeCount_,value_]:=
+ Print["Edge Count: "<>ToString[edgeCount]]
+AddEventHandler[he@EdgeCount,EdgeCountCB]
+
+Input["Click OK to exit"]
+
+(* Clean up *)
+ipcon@Disconnect[]
+ReleaseNETObject[he]
+ReleaseNETObject[ipcon]
