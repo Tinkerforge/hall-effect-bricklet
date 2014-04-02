@@ -14,7 +14,8 @@ my $he = Tinkerforge::BrickletHallEffect->new(&UID, $ipcon); # Create device obj
 sub cb_edge_count
 {
     my ($edge_count, $value) = @_;
-    print "\nEdge Count: $edge_count\n";
+
+    print "Edge Count: $edge_count\n";
 }
 
 $ipcon->connect(&HOST, &PORT); # Connect to brickd
@@ -28,7 +29,7 @@ $he->set_edge_count_callback_period(50);
 # Register edge count callback to function cb_edge_count
 $he->register_callback($he->CALLBACK_EDGE_COUNT, 'cb_edge_count');
 
-print "\nPress any key to exit...\n";
+print "Press any key to exit...\n";
 <STDIN>;
 $ipcon->disconnect();
 

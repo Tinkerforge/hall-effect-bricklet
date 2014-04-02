@@ -15,10 +15,9 @@ $ipcon->connect(&HOST, &PORT); # Connect to brickd
 
 # Get current edge count of encoder without reset 
 my $edge_count = $he->get_edge_count(0);
+print "EdgeCount: $edge_count\n";
 
-print "\nEdgeCount: $edge_count\n";
-
-print "\nPress any key to exit...\n";
+print "Press any key to exit...\n";
 <STDIN>;
 $ipcon->disconnect();
 
