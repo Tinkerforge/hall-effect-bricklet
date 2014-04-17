@@ -14,9 +14,8 @@ function matlab_example_simple
 
     % Get current edge count of encoder without reset 
     edge_count = he.getEdgeCount(false);
-
     fprintf('EdgeCount: %g\n', edge_count);
 
-    input('\nPress any key to exit...\n', 's');
+    input('Press any key to exit...\n', 's');
     ipcon.disconnect();
 end

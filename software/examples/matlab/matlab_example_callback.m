@@ -18,13 +18,13 @@ function matlab_example_callback
     he.setEdgeCountCallbackPeriod(50);
 
     % Register edge count callback to function cb_edge_count
-    set(he, 'EdgeCountCallback', @(h, e)cb_edge(e.count, e.value));
+    set(he, 'EdgeCountCallback', @(h, e) cb_edge(e));
 
-    input('\nPress any key to exit...\n', 's');
+    input('Press any key to exit...\n', 's');
     ipcon.disconnect();
 end
 
 % Callback function for edge count callback
-function cb_edge(edge_count, value)
-    fprintf('EdgeCount: %g\n', edge_count);
+function cb_edge(e)
+    fprintf('EdgeCount: %g\n', e.count);
 end

@@ -13,9 +13,8 @@ function octave_example_simple
 
     % Get current edge count of encoder without reset 
     edge_count = he.getEdgeCount(false);
-
     fprintf("EdgeCount: %s\n", edge_count.toString());
 
-    input("\nPress any key to exit...\n", "s");
+    input("Press any key to exit...\n", "s");
     ipcon.disconnect();
 end
