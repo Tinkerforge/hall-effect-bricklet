@@ -28,8 +28,8 @@ class Example
 		// Register edge count callback to function EdgeCountCB
 		he.EdgeCount += EdgeCountCB;
 
-		System.Console.WriteLine("Press key to exit");
-		System.Console.ReadKey();
+		System.Console.WriteLine("Press enter to exit");
+		System.Console.ReadLine();
 		ipcon.Disconnect();
 	}
 }
