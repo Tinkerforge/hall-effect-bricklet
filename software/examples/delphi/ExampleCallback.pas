@@ -12,7 +12,8 @@ type
     ipcon: TIPConnection;
     he: TBrickletHallEffect;
   public
-    procedure EdgeCountCB(sender: TBrickletHallEffect; const edge_count: longword; const value: Boolean);
+    procedure EdgeCountCB(sender: TBrickletHallEffect;
+                          const edge_count: longword; const value: Boolean);
     procedure Execute;
   end;
 
@@ -25,7 +26,8 @@ var
   e: TExample;
 
 { Callback function for edge count callback }
-procedure TExample.EdgeCountCB(sender: TBrickletHallEffect; const edge_count: longword; const value: Boolean);
+procedure TExample.EdgeCountCB(sender: TBrickletHallEffect;
+                               const edge_count: longword; const value: Boolean);
 begin
   WriteLn(Format('Edge Count: %d', [edge_count]));
 end;
