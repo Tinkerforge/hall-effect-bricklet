@@ -12,7 +12,7 @@ class Example
 		System.Console.WriteLine("Edge Count: " + edge_count);
 	}
 
-	static void Main() 
+	static void Main()
 	{
 		IPConnection ipcon = new IPConnection(); // Create IP connection
 		BrickletHallEffect he = new BrickletHallEffect(UID, ipcon); // Create device object

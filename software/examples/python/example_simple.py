@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-  
+# -*- coding: utf-8 -*-
 
 HOST = "localhost"
 PORT = 4223
@@ -17,8 +17,7 @@ if __name__ == "__main__":
 
     # Get current edge count of encoder without reset 
     edge_count = he.get_edge_count(False)
-
-    print('EdgeCount: ' + str(edge_count))
+    print('Edge Count: ' + str(edge_count))
 
     raw_input('Press key to exit\n') # Use input() in Python 3
     ipcon.disconnect()

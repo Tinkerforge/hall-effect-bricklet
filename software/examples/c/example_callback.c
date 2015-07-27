@@ -22,7 +22,7 @@ int main() {
 
 	// Create device object
 	HallEffect he;
-	hall_effect_create(&he, UID, &ipcon); 
+	hall_effect_create(&he, UID, &ipcon);
 
 	// Connect to brickd
 	if(ipcon_connect(&ipcon, HOST, PORT) < 0) {

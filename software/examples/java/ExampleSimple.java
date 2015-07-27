@@ -1,5 +1,5 @@
-import com.tinkerforge.BrickletHallEffect;
 import com.tinkerforge.IPConnection;
+import com.tinkerforge.BrickletHallEffect;
 
 public class ExampleSimple {
 	private static final String HOST = "localhost";
@@ -16,9 +16,8 @@ public class ExampleSimple {
 		// Don't use device before ipcon is connected
 
 		// Get current edge count without reset
-		long edge_count = he.getEdgeCount(false); // Can throw com.tinkerforge.TimeoutException
-
-		System.out.println("Edge Count: " + edge_count);
+		long edgeCount = he.getEdgeCount(false); // Can throw com.tinkerforge.TimeoutException
+		System.out.println("Edge Count: " + edgeCount);
 
 		System.out.println("Press key to exit"); System.in.read();
 		ipcon.disconnect();

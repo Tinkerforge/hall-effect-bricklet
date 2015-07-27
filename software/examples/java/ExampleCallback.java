@@ -1,5 +1,5 @@
-import com.tinkerforge.BrickletHallEffect;
 import com.tinkerforge.IPConnection;
+import com.tinkerforge.BrickletHallEffect;
 
 public class ExampleCallback {
 	private static final String HOST = "localhost";
