@@ -14,7 +14,7 @@ class Example
 		ipcon.Connect(HOST, PORT); // Connect to brickd
 		// Don't use device before ipcon is connected
 
-		// Get current edge count of Hall Effect Bricklet without reset
+		// Get current edge count without reset
 		long edgeCount = he.GetEdgeCount(false);
 		System.Console.WriteLine("Edge Count: " + edgeCount);
 

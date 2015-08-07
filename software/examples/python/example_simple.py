@@ -15,7 +15,7 @@ if __name__ == "__main__":
     ipcon.connect(HOST, PORT) # Connect to brickd
     # Don't use device before ipcon is connected
 
-    # Get current edge count of encoder without reset 
+    # Get current edge count without reset
     edge_count = he.get_edge_count(False)
     print('Edge Count: ' + str(edge_count))
 

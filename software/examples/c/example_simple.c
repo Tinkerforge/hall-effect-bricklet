@@ -26,7 +26,7 @@ int main() {
 	// Get current edge count without reset
 	uint32_t edge_count;
 	if(hall_effect_get_edge_count(&he, false, &edge_count) < 0) {
-		fprintf(stderr, "Could not get edge count, probably timeout\n");
+		fprintf(stderr, "Could not get edge count without reset, probably timeout\n");
 		exit(1);
 	}
 

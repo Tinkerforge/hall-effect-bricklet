@@ -16,7 +16,7 @@ he = BrickletHallEffect.new UID, ipcon # Create device object
 ipcon.connect HOST, PORT # Connect to brickd
 # Don't use device before ipcon is connected
 
-# Get current edge count of encoder without reset 
+# Get current edge count without reset
 edge_count = he.get_edge_count false
 puts "Edge Count: #{edge_count}"
 
