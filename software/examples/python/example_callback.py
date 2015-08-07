@@ -6,7 +6,7 @@ PORT = 4223
 UID = "XYZ" # Change to your UID
 
 from tinkerforge.ip_connection import IPConnection
-from tinkerforge.bricklet_hall_effect import HallEffect
+from tinkerforge.bricklet_hall_effect import BrickletHallEffect
 
 # Callback function for edge count callback
 def cb_edge_count(edge_count, value):
@@ -14,7 +14,7 @@ def cb_edge_count(edge_count, value):
 
 if __name__ == "__main__":
     ipcon = IPConnection() # Create IP connection
-    he = HallEffect(UID, ipcon) # Create device object
+    he = BrickletHallEffect(UID, ipcon) # Create device object
 
     ipcon.connect(HOST, PORT) # Connect to brickd
     # Don't use device before ipcon is connected
