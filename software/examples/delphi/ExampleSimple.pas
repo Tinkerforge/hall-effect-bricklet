@@ -24,7 +24,7 @@ var
   e: TExample;
 
 procedure TExample.Execute;
-var edge_count: longword;
+var edgeCount: longword;
 begin
   { Create IP connection }
   ipcon := TIPConnection.Create;
@@ -37,8 +37,8 @@ begin
   { Don't use device before ipcon is connected }
 
   { Get current edge count without reset }
-  edge_count := he.GetEdgeCount(false);
-  WriteLn(Format('Edge Count: %d', [edge_count]));
+  edgeCount := he.GetEdgeCount(false);
+  WriteLn(Format('Edge Count: %d', [edgeCount]));
 
   WriteLn('Press key to exit');
   ReadLn;
