@@ -12,10 +12,9 @@ Module ExampleSimple
         ipcon.Connect(HOST, PORT) ' Connect to brickd
         ' Don't use device before ipcon is connected
 
-        ' Get current edge_count of Hall Effect Bricklet without reset
-        Dim edge_count As Long = he.GetEdgeCount(false)
-
-        System.Console.WriteLine("EdgeCount: " + edge_count.ToString())
+        ' Get current edge count without reset
+        Dim edgeCount As Long = he.GetEdgeCount(false)
+        System.Console.WriteLine("Edge Count: " + edgeCount.ToString())
 
         System.Console.WriteLine("Press key to exit")
         System.Console.ReadLine()
