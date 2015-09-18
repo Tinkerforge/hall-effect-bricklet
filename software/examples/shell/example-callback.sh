@@ -1,13 +1,16 @@
 #!/bin/sh
-# connects to localhost:4223 by default, use --host and --port to change it
+# Connects to localhost:4223 by default, use --host and --port to change this
 
-# change to your UID
-uid=XYZ
+uid=XYZ # Change to your UID
 
-# set period for edge_count callback to 0.05s (50ms)
-# note: the edge_count callback is only called every second if the
-#       edge_count has changed since the last call!
+# Handle incoming edge count callbacks
+tinkerforge dispatch hall-effect-bricklet $uid edge-count &
+
+# Set period for edge count callback to 0.05s (50ms)
+# Note: The edge count callback is only called every 0.05 seconds
+#       if the edge count has changed since the last call!
 tinkerforge call hall-effect-bricklet $uid set-edge-count-callback-period 50
 
-# handle incoming edge count callbacks
-tinkerforge dispatch hall-effect-bricklet $uid edge-count
+echo "Press key to exit"; read dummy
+
+kill -- -$$ # Stop callback dispatch in background

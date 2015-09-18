@@ -15,8 +15,8 @@ $ipcon->connect(&HOST, &PORT); # Connect to brickd
 
 # Get current edge count without reset
 my $edge_count = $he->get_edge_count(0);
-print "Edge Count: " . $edge_count . "\n";
+print "Edge Count: $edge_count\n";
 
-print "Press any key to exit...\n";
+print "Press key to exit\n";
 <STDIN>;
 $ipcon->disconnect();

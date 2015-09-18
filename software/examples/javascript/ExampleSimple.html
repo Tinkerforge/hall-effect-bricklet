@@ -34,20 +34,20 @@
                 var he = new Tinkerforge.BrickletHallEffect(UID, ipcon); // Create device object
                 ipcon.connect(HOST, PORT,
                     function(error) {
-                        textArea.value += 'Error: '+error+ '\n';
+                        textArea.value += 'Error: ' + error + '\n';
                     }
                 ); // Connect to brickd
                 // Don't use device before ipcon is connected
 
                 ipcon.on(Tinkerforge.IPConnection.CALLBACK_CONNECTED,
-                    function(connectReason) {
-                        // Get current edge count of encoder without reset
+                    function (connectReason) {
+                        // Get current edge count without reset
                         he.getEdgeCount(false,
-                            function(edgeCount) {
-                                textArea.value += 'Edge Count: '+edgeCount+'\n';
+                            function (edgeCount) {
+                                textArea.value += 'Edge Count: ' + edgeCount + '\n';
                             },
-                            function(error) {
-                                textArea.value += 'Error: '+error+'\n';
+                            function (error) {
+                                textArea.value += 'Error: ' + error + '\n';
                             }
                         );
                     }

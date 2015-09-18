@@ -13,7 +13,7 @@ type
     he: TBrickletHallEffect;
   public
     procedure EdgeCountCB(sender: TBrickletHallEffect;
-                          const edge_count: longword; const value: Boolean);
+                          const edgeCount: longword; const value: boolean);
     procedure Execute;
   end;
 
@@ -25,11 +25,11 @@ const
 var
   e: TExample;
 
-{ Callback function for edge count callback }
+{ Callback procedure for edge count callback }
 procedure TExample.EdgeCountCB(sender: TBrickletHallEffect;
-                               const edge_count: longword; const value: Boolean);
+                               const edgeCount: longword; const value: boolean);
 begin
-  WriteLn(Format('Edge Count: %d', [edge_count]));
+  WriteLn(Format('Edge Count: %d', [edgeCount]));
 end;
 
 procedure TExample.Execute;
@@ -44,13 +44,13 @@ begin
   ipcon.Connect(HOST, PORT);
   { Don't use device before ipcon is connected }
 
-  { Set Period for edge_count callback to 0.05s (50ms)
-    Note: The edge_count callback is only called every 50ms if the
-          edge_count has changed since the last call! }
-  he.SetEdgeCountCallbackPeriod(50);
-
-  { Register edge_count callback to procedure EdgeCountCB }
+  { Register edge count callback to procedure EdgeCountCB }
   he.OnEdgeCount := {$ifdef FPC}@{$endif}EdgeCountCB;
+
+  { Set period for edge count callback to 0.05s (50ms)
+    Note: The edge count callback is only called every 0.05 seconds
+          if the edge count has changed since the last call! }
+  he.SetEdgeCountCallbackPeriod(50);
 
   WriteLn('Press key to exit');
   ReadLn;

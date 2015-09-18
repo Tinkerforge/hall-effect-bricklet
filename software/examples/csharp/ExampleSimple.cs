@@ -1,3 +1,4 @@
+using System;
 using Tinkerforge;
 
 class Example
@@ -16,10 +17,10 @@ class Example
 
 		// Get current edge count without reset
 		long edgeCount = he.GetEdgeCount(false);
-		System.Console.WriteLine("Edge Count: " + edgeCount);
+		Console.WriteLine("Edge Count: " + edgeCount);
 
-		System.Console.WriteLine("Press enter to exit");
-		System.Console.ReadLine();
+		Console.WriteLine("Press enter to exit");
+		Console.ReadLine();
 		ipcon.Disconnect();
 	}
 }

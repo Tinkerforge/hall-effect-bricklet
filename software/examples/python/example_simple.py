@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     # Get current edge count without reset
     edge_count = he.get_edge_count(False)
-    print('Edge Count: ' + str(edge_count))
+    print("Edge Count: " + str(edge_count))
 
-    raw_input('Press key to exit\n') # Use input() in Python 3
+    raw_input("Press key to exit\n") # Use input() in Python 3
     ipcon.disconnect()

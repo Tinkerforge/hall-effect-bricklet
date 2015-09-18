@@ -1,3 +1,4 @@
+Imports System
 Imports Tinkerforge
 
 Module ExampleSimple
@@ -13,11 +14,11 @@ Module ExampleSimple
         ' Don't use device before ipcon is connected
 
         ' Get current edge count without reset
-        Dim edgeCount As Long = he.GetEdgeCount(false)
-        System.Console.WriteLine("Edge Count: " + edgeCount.ToString())
+        Dim edgeCount As Long = he.GetEdgeCount(False)
+        Console.WriteLine("Edge Count: " + edgeCount.ToString())
 
-        System.Console.WriteLine("Press key to exit")
-        System.Console.ReadLine()
+        Console.WriteLine("Press key to exit")
+        Console.ReadLine()
         ipcon.Disconnect()
     End Sub
 End Module

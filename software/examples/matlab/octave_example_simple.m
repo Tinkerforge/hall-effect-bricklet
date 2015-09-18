@@ -3,7 +3,7 @@ function octave_example_simple()
 
     HOST = "localhost";
     PORT = 4223;
-    UID = "uit"; % Change to your UID
+    UID = "XYZ"; % Change to your UID
 
     ipcon = java_new("com.tinkerforge.IPConnection"); % Create IP connection
     he = java_new("com.tinkerforge.BrickletHallEffect", UID, ipcon); % Create device object
@@ -11,18 +11,18 @@ function octave_example_simple()
     ipcon.connect(HOST, PORT); % Connect to brickd
     % Don't use device before ipcon is connected
 
-    % Get current edge count of encoder without reset
-    edge_count = he.getEdgeCount(false);
-    fprintf("EdgeCount: %d\n", long2int(edge_count));
+    % Get current edge count without reset
+    edgeCount = he.getEdgeCount(false);
+    fprintf("Edge Count: %d\n", java2int(edgeCount));
 
-    input("Press any key to exit...\n", "s");
+    input("Press key to exit\n", "s");
     ipcon.disconnect();
 end
 
-function int = long2int(long)
+function int = java2int(value)
     if compare_versions(version(), "3.8", "<=")
-        int = long.intValue();
+        int = value.intValue();
     else
-        int = long;
+        int = value;
     end
 end

@@ -1,3 +1,4 @@
+Imports System
 Imports Tinkerforge
 
 Module ExampleCallback
@@ -5,9 +6,9 @@ Module ExampleCallback
     Const PORT As Integer = 4223
     Const UID As String = "XYZ" ' Change to your UID
 
-    ' Callback function for edge_count callback
-    Sub EdgeCountCB(ByVal sender As BrickletHallEffect, ByVal edge_count As Long, ByVal value As Boolean)
-        System.Console.WriteLine("Edge Count: " + edge_count.ToString())
+    ' Callback subroutine for edge count callback
+    Sub EdgeCountCB(ByVal sender As BrickletHallEffect, ByVal edgeCount As Long, ByVal value As Boolean)
+        Console.WriteLine("Edge Count: " + edgeCount.ToString())
     End Sub
 
     Sub Main()
@@ -17,16 +18,16 @@ Module ExampleCallback
         ipcon.Connect(HOST, PORT) ' Connect to brickd
         ' Don't use device before ipcon is connected
 
-        ' Set Period for edge_count callback to 0.05s (50ms)
-        ' Note: The edge_count callback is only called every 50ms if the
-        '       edge_count has changed since the last call!
-        he.SetEdgeCountCallbackPeriod(50)
-
-        ' Register edge count callback to EdgeCountCB
+        ' Register edge count callback to subroutine EdgeCountCB
         AddHandler he.EdgeCount, AddressOf EdgeCountCB
 
-        System.Console.WriteLine("Press key to exit")
-        System.Console.ReadLine()
+        ' Set period for edge count callback to 0.05s (50ms)
+        ' Note: The edge count callback is only called every 0.05 seconds
+        '       if the edge count has changed since the last call!
+        he.SetEdgeCountCallbackPeriod(50)
+
+        Console.WriteLine("Press key to exit")
+        Console.ReadLine()
         ipcon.Disconnect()
     End Sub
 End Module

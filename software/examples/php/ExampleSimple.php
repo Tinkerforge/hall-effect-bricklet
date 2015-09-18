@@ -16,10 +16,9 @@ $he = new BrickletHallEffect(UID, $ipcon); // Create device object
 $ipcon->connect(HOST, PORT); // Connect to brickd
 // Don't use device before ipcon is connected
 
-// Get current edge count of Hall Effect Bricklet without reset 
-$edge_count = $he->getEdgeCount(false);
-
-echo "EdgeCount: $edge_count\n";
+// Get current edge count without reset
+$edge_count = $he->getEdgeCount(FALSE);
+echo "Edge Count: $edge_count\n";
 
 echo "Press key to exit\n";
 fgetc(fopen('php://stdin', 'r'));
