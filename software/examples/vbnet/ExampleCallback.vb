@@ -7,7 +7,8 @@ Module ExampleCallback
     Const UID As String = "XYZ" ' Change to your UID
 
     ' Callback subroutine for edge count callback
-    Sub EdgeCountCB(ByVal sender As BrickletHallEffect, ByVal edgeCount As Long, ByVal value As Boolean)
+    Sub EdgeCountCB(ByVal sender As BrickletHallEffect, _
+                    ByVal edgeCount As Long, ByVal value As Boolean)
         Console.WriteLine("Edge Count: " + edgeCount.ToString())
     End Sub
 
