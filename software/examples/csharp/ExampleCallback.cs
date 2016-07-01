@@ -5,7 +5,7 @@ class Example
 {
 	private static string HOST = "localhost";
 	private static int PORT = 4223;
-	private static string UID = "XYZ"; // Change to your UID
+	private static string UID = "XYZ"; // Change XYZ to the UID of your Hall Effect Bricklet
 
 	// Callback function for edge count callback
 	static void EdgeCountCB(BrickletHallEffect sender, long edgeCount, bool value)

@@ -5,7 +5,7 @@
 
 #define HOST "localhost"
 #define PORT 4223
-#define UID "XYZ" // Change to your UID
+#define UID "XYZ" // Change XYZ to the UID of your Hall Effect Bricklet
 
 // Callback function for edge count callback
 void cb_edge_count(uint32_t edge_count, bool value, void *user_data) {

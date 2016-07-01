@@ -4,7 +4,7 @@ Imports Tinkerforge
 Module ExampleCallback
     Const HOST As String = "localhost"
     Const PORT As Integer = 4223
-    Const UID As String = "XYZ" ' Change to your UID
+    Const UID As String = "XYZ" ' Change XYZ to the UID of your Hall Effect Bricklet
 
     ' Callback subroutine for edge count callback
     Sub EdgeCountCB(ByVal sender As BrickletHallEffect, ByVal edgeCount As Long, _
