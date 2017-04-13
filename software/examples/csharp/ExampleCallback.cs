@@ -22,7 +22,7 @@ class Example
 		// Don't use device before ipcon is connected
 
 		// Register edge count callback to function EdgeCountCB
-		he.EdgeCount += EdgeCountCB;
+		he.EdgeCountCallback += EdgeCountCB;
 
 		// Set period for edge count callback to 0.05s (50ms)
 		// Note: The edge count callback is only called every 0.05 seconds
