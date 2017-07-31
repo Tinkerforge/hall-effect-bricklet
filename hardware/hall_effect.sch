@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:tinkerforge
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -10,7 +11,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -29,9 +29,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:tinkerforge
-LIBS:hall_effect-cache
-EELAYER 27 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -132,7 +130,7 @@ U 1 1 4C5FD6ED
 P 4300 3200
 F 0 "C1" V 4450 3200 50  0000 L CNN
 F 1 "100nF" V 4150 3100 50  0000 L CNN
-F 2 "0603" H 4300 3200 60  0001 C CNN
+F 2 "C0603" H 4300 3200 60  0001 C CNN
 F 3 "" H 4300 3200 60  0001 C CNN
 	1    4300 3200
 	0    -1   -1   0   
@@ -235,7 +233,7 @@ U 1 1 5200AAA6
 P 5300 4050
 F 0 "R1" V 5380 4050 50  0000 C CNN
 F 1 "10k" V 5300 4050 50  0000 C CNN
-F 2 "0603" H 5300 4050 60  0001 C CNN
+F 2 "R0603" H 5300 4050 60  0001 C CNN
 F 3 "" H 5300 4050 60  0000 C CNN
 	1    5300 4050
 	1    0    0    -1  
@@ -310,7 +308,7 @@ U 1 1 5200F52B
 P 5850 4000
 F 0 "C2" V 6000 4000 50  0000 L CNN
 F 1 "100nF" V 5700 3900 50  0000 L CNN
-F 2 "0603" H 5850 4000 60  0001 C CNN
+F 2 "C0603" H 5850 4000 60  0001 C CNN
 F 3 "" H 5850 4000 60  0001 C CNN
 	1    5850 4000
 	0    -1   -1   0   
