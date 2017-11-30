@@ -13,7 +13,7 @@ ipcon@Connect[host,port]
 (*Callback function for edge count callback*)
 EdgeCountCB[sender_,edgeCount_,value_]:=
  Print["Edge Count: "<>ToString[edgeCount]]
-AddEventHandler[he@EdgeCount,EdgeCountCB]
+AddEventHandler[he@EdgeCountCallback,EdgeCountCB]
 
 (*Set period for edge count callback to 0.05s (50ms)*)
 (*Note: The edge count callback is only called every 0.05 seconds*)
