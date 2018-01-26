@@ -30,7 +30,7 @@ int main(void) {
 		return 1;
 	}
 
-	printf("Edge Count: %d\n", edge_count);
+	printf("Edge Count: %u\n", edge_count);
 
 	printf("Press key to exit\n");
 	getchar();
