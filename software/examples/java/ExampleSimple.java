@@ -18,8 +18,8 @@ public class ExampleSimple {
 		// Don't use device before ipcon is connected
 
 		// Get current edge count without reset
-		long edgeCount = he.getEdgeCount(false); // Can throw com.tinkerforge.TimeoutException
-		System.out.println("Edge Count: " + edgeCount);
+		long count = he.getEdgeCount(false); // Can throw com.tinkerforge.TimeoutException
+		System.out.println("Count: " + count);
 
 		System.out.println("Press key to exit"); System.in.read();
 		ipcon.disconnect();

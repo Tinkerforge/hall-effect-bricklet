@@ -8,10 +8,10 @@
 #define UID "XYZ" // Change XYZ to the UID of your Hall Effect Bricklet
 
 // Callback function for edge count callback
-void cb_edge_count(uint32_t edge_count, bool value, void *user_data) {
+void cb_edge_count(uint32_t count, bool value, void *user_data) {
 	(void)value; (void)user_data; // avoid unused parameter warning
 
-	printf("Edge Count: %u\n", edge_count);
+	printf("Count: %u\n", count);
 }
 
 int main(void) {

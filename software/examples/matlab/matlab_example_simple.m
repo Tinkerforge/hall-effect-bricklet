@@ -13,8 +13,8 @@ function matlab_example_simple()
     % Don't use device before ipcon is connected
 
     % Get current edge count without reset
-    edgeCount = he.getEdgeCount(false);
-    fprintf('Edge Count: %i\n', edgeCount);
+    count = he.getEdgeCount(false);
+    fprintf('Count: %i\n', count);
 
     input('Press key to exit\n', 's');
     ipcon.disconnect();

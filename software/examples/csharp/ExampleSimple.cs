@@ -16,8 +16,8 @@ class Example
 		// Don't use device before ipcon is connected
 
 		// Get current edge count without reset
-		long edgeCount = he.GetEdgeCount(false);
-		Console.WriteLine("Edge Count: " + edgeCount);
+		long count = he.GetEdgeCount(false);
+		Console.WriteLine("Count: " + count);
 
 		Console.WriteLine("Press enter to exit");
 		Console.ReadLine();

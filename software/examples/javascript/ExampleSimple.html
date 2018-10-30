@@ -43,8 +43,8 @@
                     function (connectReason) {
                         // Get current edge count without reset
                         he.getEdgeCount(false,
-                            function (edgeCount) {
-                                textArea.value += 'Edge Count: ' + edgeCount + '\n';
+                            function (count) {
+                                textArea.value += 'Count: ' + count + '\n';
                             },
                             function (error) {
                                 textArea.value += 'Error: ' + error + '\n';

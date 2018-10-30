@@ -19,7 +19,7 @@ Notebook[{
    RowBox[{"
 "}],
    RowBox[{"(*", "Get current edge count without reset", "*)"}],
-   RowBox[{"Print", "[", RowBox[{"\"\<Edge Count: \>\"", "<>", RowBox[{"ToString", "[", RowBox[{"he", "@", RowBox[{"GetEdgeCount", "[", "False", "]"}]}], "]"}]}], "]"}],
+   RowBox[{"Print", "[", RowBox[{"\"\<Count: \>\"", "<>", RowBox[{"ToString", "[", RowBox[{"he", "@", RowBox[{"GetEdgeCount", "[", "False", "]"}]}], "]"}]}], "]"}],
    RowBox[{"
 "}],
    RowBox[{"(*", "Clean up", "*)"}],

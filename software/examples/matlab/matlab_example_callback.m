@@ -26,5 +26,5 @@ end
 
 % Callback function for edge count callback
 function cb_edge_count(e)
-    fprintf('Edge Count: %i\n', e.edgeCount);
+    fprintf('Count: %i\n', e.count);
 end

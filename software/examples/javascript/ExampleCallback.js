@@ -26,8 +26,8 @@ ipcon.on(Tinkerforge.IPConnection.CALLBACK_CONNECTED,
 // Register edge count callback
 he.on(Tinkerforge.BrickletHallEffect.CALLBACK_EDGE_COUNT,
     // Callback function for edge count callback
-    function (edgeCount, value) {
-        console.log('Edge Count: ' + edgeCount);
+    function (count, value) {
+        console.log('Count: ' + count);
     }
 );
 

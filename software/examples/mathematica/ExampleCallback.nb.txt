@@ -11,8 +11,8 @@ he=NETNew["Tinkerforge.BrickletHallEffect",uid,ipcon]
 ipcon@Connect[host,port]
 
 (*Callback function for edge count callback*)
-EdgeCountCB[sender_,edgeCount_,value_]:=
- Print["Edge Count: "<>ToString[edgeCount]]
+EdgeCountCB[sender_,count_,value_]:=
+ Print["Count: "<>ToString[count]]
 AddEventHandler[he@EdgeCountCallback,EdgeCountCB]
 
 (*Set period for edge count callback to 0.05s (50ms)*)

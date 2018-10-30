@@ -9,8 +9,8 @@ from tinkerforge.ip_connection import IPConnection
 from tinkerforge.bricklet_hall_effect import BrickletHallEffect
 
 # Callback function for edge count callback
-def cb_edge_count(edge_count, value):
-    print("Edge Count: " + str(edge_count))
+def cb_edge_count(count, value):
+    print("Count: " + str(count))
 
 if __name__ == "__main__":
     ipcon = IPConnection() # Create IP connection

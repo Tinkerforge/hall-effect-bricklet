@@ -11,9 +11,9 @@ const PORT = 4223;
 const UID = 'XYZ'; // Change XYZ to the UID of your Hall Effect Bricklet
 
 // Callback function for edge count callback
-function cb_edgeCount($edge_count, $value)
+function cb_edgeCount($count, $value)
 {
-    echo "Edge Count: $edge_count\n";
+    echo "Count: $count\n";
 }
 
 $ipcon = new IPConnection(); // Create IP connection

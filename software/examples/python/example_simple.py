@@ -16,8 +16,8 @@ if __name__ == "__main__":
     # Don't use device before ipcon is connected
 
     # Get current edge count without reset
-    edge_count = he.get_edge_count(False)
-    print("Edge Count: " + str(edge_count))
+    count = he.get_edge_count(False)
+    print("Count: " + str(count))
 
     raw_input("Press key to exit\n") # Use input() in Python 3
     ipcon.disconnect()

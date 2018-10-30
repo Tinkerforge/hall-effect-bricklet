@@ -8,9 +8,9 @@ class Example
 	private static string UID = "XYZ"; // Change XYZ to the UID of your Hall Effect Bricklet
 
 	// Callback function for edge count callback
-	static void EdgeCountCB(BrickletHallEffect sender, long edgeCount, bool value)
+	static void EdgeCountCB(BrickletHallEffect sender, long count, bool value)
 	{
-		Console.WriteLine("Edge Count: " + edgeCount);
+		Console.WriteLine("Count: " + count);
 	}
 
 	static void Main()

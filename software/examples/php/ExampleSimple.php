@@ -17,8 +17,8 @@ $ipcon->connect(HOST, PORT); // Connect to brickd
 // Don't use device before ipcon is connected
 
 // Get current edge count without reset
-$edge_count = $he->getEdgeCount(FALSE);
-echo "Edge Count: $edge_count\n";
+$count = $he->getEdgeCount(FALSE);
+echo "Count: $count\n";
 
 echo "Press key to exit\n";
 fgetc(fopen('php://stdin', 'r'));

@@ -17,8 +17,8 @@ ipcon.connect HOST, PORT # Connect to brickd
 # Don't use device before ipcon is connected
 
 # Register edge count callback
-he.register_callback(BrickletHallEffect::CALLBACK_EDGE_COUNT) do |edge_count, value|
-  puts "Edge Count: #{edge_count}"
+he.register_callback(BrickletHallEffect::CALLBACK_EDGE_COUNT) do |count, value|
+  puts "Count: #{count}"
 end
 
 # Set period for edge count callback to 0.05s (50ms)

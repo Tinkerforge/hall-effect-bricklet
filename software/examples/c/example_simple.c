@@ -24,13 +24,13 @@ int main(void) {
 	// Don't use device before ipcon is connected
 
 	// Get current edge count without reset
-	uint32_t edge_count;
-	if(hall_effect_get_edge_count(&he, false, &edge_count) < 0) {
+	uint32_t count;
+	if(hall_effect_get_edge_count(&he, false, &count) < 0) {
 		fprintf(stderr, "Could not get edge count without reset, probably timeout\n");
 		return 1;
 	}
 
-	printf("Edge Count: %u\n", edge_count);
+	printf("Count: %u\n", count);
 
 	printf("Press key to exit\n");
 	getchar();

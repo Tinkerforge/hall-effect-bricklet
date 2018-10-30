@@ -19,8 +19,8 @@ public class ExampleCallback {
 
 		// Add edge count listener
 		he.addEdgeCountListener(new BrickletHallEffect.EdgeCountListener() {
-			public void edgeCount(long edgeCount, boolean value) {
-				System.out.println("Edge Count: " + edgeCount);
+			public void edgeCount(long count, boolean value) {
+				System.out.println("Count: " + count);
 			}
 		});
 

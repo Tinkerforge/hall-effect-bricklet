@@ -51,8 +51,8 @@
                 // Register edge count callback
                 he.on(Tinkerforge.BrickletHallEffect.CALLBACK_EDGE_COUNT,
                     // Callback function for edge count callback
-                    function (edgeCount, value) {
-                        textArea.value += 'Edge Count: ' + edgeCount + '\n';
+                    function (count, value) {
+                        textArea.value += 'Count: ' + count + '\n';
                         textArea.scrollTop = textArea.scrollHeight;
                     }
                 );

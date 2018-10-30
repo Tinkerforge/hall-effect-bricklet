@@ -25,7 +25,7 @@ end
 
 % Callback function for edge count callback
 function cb_edge_count(e)
-    fprintf("Edge Count: %d\n", java2int(e.edgeCount));
+    fprintf("Count: %d\n", java2int(e.count));
 end
 
 function int = java2int(value)

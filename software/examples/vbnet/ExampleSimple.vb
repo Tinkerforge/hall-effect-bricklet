@@ -14,8 +14,8 @@ Module ExampleSimple
         ' Don't use device before ipcon is connected
 
         ' Get current edge count without reset
-        Dim edgeCount As Long = he.GetEdgeCount(False)
-        Console.WriteLine("Edge Count: " + edgeCount.ToString())
+        Dim count As Long = he.GetEdgeCount(False)
+        Console.WriteLine("Count: " + count.ToString())
 
         Console.WriteLine("Press key to exit")
         Console.ReadLine()

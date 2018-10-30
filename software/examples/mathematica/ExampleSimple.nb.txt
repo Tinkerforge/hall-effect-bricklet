@@ -11,7 +11,7 @@ he=NETNew["Tinkerforge.BrickletHallEffect",uid,ipcon]
 ipcon@Connect[host,port]
 
 (*Get current edge count without reset*)
-Print["Edge Count: "<>ToString[he@GetEdgeCount[False]]]
+Print["Count: "<>ToString[he@GetEdgeCount[False]]]
 
 (*Clean up*)
 ipcon@Disconnect[]

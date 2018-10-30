@@ -18,8 +18,8 @@ ipcon.on(Tinkerforge.IPConnection.CALLBACK_CONNECTED,
     function (connectReason) {
         // Get current edge count without reset
         he.getEdgeCount(false,
-            function (edgeCount) {
-                console.log('Edge Count: ' + edgeCount);
+            function (count) {
+                console.log('Count: ' + count);
             },
             function (error) {
                 console.log('Error: ' + error);

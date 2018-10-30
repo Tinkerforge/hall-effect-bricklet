@@ -12,8 +12,8 @@ function octave_example_simple()
     % Don't use device before ipcon is connected
 
     % Get current edge count without reset
-    edgeCount = he.getEdgeCount(false);
-    fprintf("Edge Count: %d\n", java2int(edgeCount));
+    count = he.getEdgeCount(false);
+    fprintf("Count: %d\n", java2int(count));
 
     input("Press key to exit\n", "s");
     ipcon.disconnect();

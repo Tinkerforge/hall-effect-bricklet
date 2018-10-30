@@ -11,9 +11,9 @@ use constant UID => 'XYZ'; # Change XYZ to the UID of your Hall Effect Bricklet
 # Callback subroutine for edge count callback
 sub cb_edge_count
 {
-    my ($edge_count, $value) = @_;
+    my ($count, $value) = @_;
 
-    print "Edge Count: $edge_count\n";
+    print "Count: $count\n";
 }
 
 my $ipcon = Tinkerforge::IPConnection->new(); # Create IP connection

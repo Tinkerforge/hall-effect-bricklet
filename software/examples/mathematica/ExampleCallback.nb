@@ -19,7 +19,7 @@ Notebook[{
    RowBox[{"
 "}],
    RowBox[{"(*", "Callback function for edge count callback", "*)"}],
-   RowBox[{RowBox[{"EdgeCountCB", "[", RowBox[{"sender_", ",", "edgeCount_", ",", "value_"}], "]"}], ":=", "\[IndentingNewLine]", RowBox[{"Print", "[", RowBox[{"\"\<Edge Count: \>\"", "<>", RowBox[{"ToString", "[", "edgeCount", "]"}]}], "]"}]}],
+   RowBox[{RowBox[{"EdgeCountCB", "[", RowBox[{"sender_", ",", "count_", ",", "value_"}], "]"}], ":=", "\[IndentingNewLine]", RowBox[{"Print", "[", RowBox[{"\"\<Count: \>\"", "<>", RowBox[{"ToString", "[", "count", "]"}]}], "]"}]}],
    RowBox[{"AddEventHandler", "[", RowBox[{RowBox[{"he", "@", "EdgeCountCallback"}], ",", "EdgeCountCB"}], "]"}],
    RowBox[{"
 "}],
