@@ -12,10 +12,10 @@ fn main() -> Result<(), Box<dyn Error>> {
     ipcon.connect((HOST, PORT)).recv()??; // Connect to brickd.
                                           // Don't use device before ipcon is connected.
 
-    // Create receiver for edge count events.
-    let edge_count_receiver = he.get_edge_count_receiver();
+    let edge_count_receiver = he.get_edge_count_callback_receiver();
 
-    // Spawn thread to handle received events. This thread ends when the `he` object
+    // Spawn thread to handle received callback messages.
+    // This thread ends when the `he` object
     // is dropped, so there is no need for manual cleanup.
     thread::spawn(move || {
         for edge_count in edge_count_receiver {
