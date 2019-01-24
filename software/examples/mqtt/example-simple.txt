@@ -2,5 +2,5 @@
 
 setup:
 	# Get current edge count without reset
-	subscribe to tinkerforge/response/hall_effect/XYZ/get_edge_count
+	subscribe to tinkerforge/response/hall_effect_bricklet/XYZ/get_edge_count
 	publish '{ "reset_counter": false}' to tinkerforge/request/hall_effect_bricklet/XYZ/get_edge_count 
