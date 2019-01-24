@@ -1,0 +1,12 @@
+
+
+# Change XYZ to the UID of your Hall Effect Bricklet
+
+setup:
+	# Handle incoming edge count callbacks
+	subscribe to tinkerforge/callback/hall_effect_bricklet/XYZ/edge_count
+	publish '{"register": true}' to tinkerforge/register/hall_effect_bricklet/XYZ/edge_count # Register edge_count callback
+	# Set period for edge count callback to 0.05s (50ms)
+	# Note: The edge count callback is only called every 0.05 seconds
+	#       if the edge count has changed since the last call!
+	publish '{"period": 50}' to tinkerforge/request/hall_effect_bricklet/XYZ/set_edge_count_callback_period
