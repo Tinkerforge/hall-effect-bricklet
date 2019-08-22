@@ -33,7 +33,7 @@ int main(void) {
 	// Register edge count callback to function cb_edge_count
 	hall_effect_register_callback(&he,
 	                              HALL_EFFECT_CALLBACK_EDGE_COUNT,
-	                              (void *)cb_edge_count,
+	                              (void (*)(void))cb_edge_count,
 	                              NULL);
 
 	// Set period for edge count callback to 0.05s (50ms)
