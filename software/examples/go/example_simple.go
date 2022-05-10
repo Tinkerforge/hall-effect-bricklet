@@ -20,7 +20,7 @@ func main() {
 
 	// Get current edge count without reset.
 	count, _ := he.GetEdgeCount(false)
-	fmt.Printf("Count: \n", count)
+	fmt.Printf("Count: %d\n", count)
 
 	fmt.Print("Press enter to exit.")
 	fmt.Scanln()
